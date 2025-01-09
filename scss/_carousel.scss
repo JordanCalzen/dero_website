@@ -1,0 +1,42 @@
+$carousel-height: 400px;
+
+.carousel-section {
+	position: relative;
+	height: $carousel-height;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	color: white;
+	background-size: cover;
+	background-position: center;
+}
+
+.image-carousel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $carousel-height;
+	display: flex;
+}
+
+.carousel-track {
+	display: flex;
+	height: 100%;
+	transition: transform 1s ease;
+}
+
+.carousel-track .carousel-item {
+	width: 100vw;
+	height: $carousel-height;
+	flex-shrink: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.content {
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}

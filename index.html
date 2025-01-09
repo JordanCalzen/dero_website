@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DerrickJonathan Business Analyst - Home</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<div class="container">
+				<div class="logo">
+					<img
+						src="images/derrickjlogo.webp"
+						alt="DerrickJonathan Business Analyst Logo"
+					/>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Hero Section -->
+		<section class="hero carousel-section">
+			<div class="image-carousel">
+				<div class="carousel-track">
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(
+									to left,
+									rgba(0, 0, 0, 0.178),
+									rgba(0, 0, 0, 0.37)
+								),
+								url('images/derrickjlogo.webp');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+						"
+					></div>
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(
+									to left,
+									rgba(0, 0, 0, 0.178),
+									rgba(0, 0, 0, 0.37)
+								),
+								url('images/businessanalyst1.jpg');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+						"
+					></div>
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(
+									to left,
+									rgba(0, 0, 0, 0.178),
+									rgba(0, 0, 0, 0.37)
+								),
+								url('images/businessanlyst2.jpg');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+						"
+					></div>
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(
+									to left,
+									rgba(0, 0, 0, 0.315),
+									rgba(0, 0, 0, 0.37)
+								),
+								url('images/businessnalyst3.jpg');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+						"
+					></div>
+					<div
+						class="carousel-item"
+						style="
+							background: linear-gradient(
+									to left,
+									rgba(0, 0, 0, 0.178),
+									rgba(0, 0, 0, 0.37)
+								),
+								url('images/businessanalyst4.jpg');
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+						"
+					></div>
+				</div>
+			</div>
+			<div class="container content">
+				<h1>Helping Businesses Work Better and Achieve More</h1>
+				<p>
+					We identify problems, improve processes, and provide strategic advice
+					to enhance your business efficiency and success.
+				</p>
+				<a href="contact.html" class="btn">Get Started</a>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="services">
+			<div class="container">
+				<h2>Our Services</h2>
+				<div class="service-items">
+					<div class="service-item">
+						<h3>Problem Identification</h3>
+						<p>
+							Analyze your business to find underlying issues that hinder
+							growth.
+						</p>
+					</div>
+					<div class="service-item">
+						<h3>Process Improvement</h3>
+						<p>
+							Streamline your operations for greater efficiency and
+							productivity.
+						</p>
+					</div>
+					<div class="service-item">
+						<h3>Data Analysis</h3>
+						<p>Leverage data to make informed decisions and strategic plans.</p>
+					</div>
+					<div class="service-item">
+						<h3>Growth Strategies</h3>
+						<p>Implement strategies that foster sustainable business growth.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section class="about">
+			<div class="container">
+				<h2>About DerrickJonathan</h2>
+				<p>
+					With years of experience in business consulting, DerrickJonathan
+					specializes in helping companies identify challenges, optimize
+					processes, and develop strategies that drive success and growth.
+				</p>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<p>
+					&copy; 2025 DerrickJonathan Business Analyst. All rights reserved.
+				</p>
+				<div class="socials">
+					<a href=""><i class="fa-brands fa-facebook"></i></a>
+					<a href=""><i class="fa-brands fa-x-twitter"></i></a>
+					<a href=""><i class="fa-brands fa-whatsapp"></i></a>
+					<a href=""><i class="fa-brands fa-youtube"></i></a>
+					<a href=""><i class="fa-brands fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const track = document.querySelector(".carousel-track");
+			const items = track.querySelectorAll(".carousel-item");
+			let index = 0;
+
+			function moveCarousel() {
+				index = (index + 1) % items.length;
+				const offset = -index * 100;
+				track.style.transform = `translateX(${offset}vw)`;
+
+				if (index === items.length - 1) {
+					setTimeout(() => {
+						track.style.transition = "none";
+						track.style.transform = "translateX(0)";
+						index = 0;
+						setTimeout(() => {
+							track.style.transition = "transform 1s ease";
+						});
+					}, 1000);
+				}
+			}
+
+			setInterval(moveCarousel, 3000);
+		</script>
+	</body>
+</html>
