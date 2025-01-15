@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		// If validation passes
-		alert(
-			"Thank you for contacting us, " + name + "! We will get back to you soon."
-		);
+		// alert(
+		// 	"Thank you for contacting us, " + name + "! We will get back to you soon."
+		// );
 
 		// Reset form
 		contactForm.reset();
