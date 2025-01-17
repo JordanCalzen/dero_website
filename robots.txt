@@ -1,0 +1,7 @@
+# Allow all web crawlers to access everything
+User-agent: *
+allow:/
+Disallow:/private
+
+# Specify the sitemap location
+Sitemap: https://www.derrickjonathanba.ug/sitemap.xml
